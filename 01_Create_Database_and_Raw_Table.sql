@@ -21,6 +21,3 @@ CREATE TABLE appointments_raw (
     PRIMARY KEY (AppointmentID)
 );
 
--- Import Dataset/KaggleV2-May-2016.csv into this table using
--- MySQL Workbench Table Data Import Wizard.
--- Keep the first row as column headers and map columns by name.
