@@ -83,48 +83,6 @@ The supplied CSV contains 110,527 rows and 14 columns. Validation found:
 - **Same-Day Booking:** waiting days = 0.
 - **31+ Days Ahead:** waiting days >= 31.
 
-Invalid values are flagged for investigation rather than silently removed from the source file. Headline rates above are calculated on all 110,527 supplied records, matching the stated project KPIs.
-
-## 🛠️ Tools & Technologies
-
-- **MySQL 8.0+:** data exploration, quality checks, aggregations, CTEs, and window functions.
-- **Power BI:** intended interactive dashboard and drill-down reporting.
-- **CSV:** original appointment dataset.
-
-## 🚀 How to Use
-
-1. Create the database and raw table by running `SQL/01_Create_Database_and_Raw_Table.sql`.
-2. Import `Dataset/KaggleV2-May-2016.csv` into `appointments_raw` using MySQL Workbench's Table Data Import Wizard. Map columns by name and retain the header row as column names.
-3. Run `SQL/02_Data_Quality_and_Cleaning.sql` to inspect data quality.
-4. Run `SQL/03_KPI_Analysis.sql` for headline KPIs.
-5. Run `SQL/04_Segment_Analysis_and_Window_Functions.sql` for segment comparisons and rankings.
-6. Build the Power BI report and save it under `PowerBI/`.
-
-The SQL uses MySQL 8.0+ features, including common table expressions and window functions.
-
-## 📂 Repository Structure
-
-```text
-Healthcare-Appointment-No-Show-Analytics/
-│
-├── Dataset/
-│   └── KaggleV2-May-2016.csv
-│
-├── SQL/
-│   ├── 01_Create_Database_and_Raw_Table.sql
-│   ├── 02_Data_Quality_and_Cleaning.sql
-│   ├── 03_KPI_Analysis.sql
-│   └── 04_Segment_Analysis_and_Window_Functions.sql
-│
-├── PowerBI/
-│   └── README.md
-│
-├── Dashboard_Screenshots/
-│   └── README.md
-│
-└── README.md
-```
-
 ## 👩‍💻 Author
 
 **Marwa Samy** · [GitHub](https://github.com/marwa23-rgb)
